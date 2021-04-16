@@ -71,6 +71,8 @@ height=700, # Condicionamento do tamanho do texto
 sunburstcolorway =colors,
 extendsunburstcolors = True) # Concede aos filhos do elemento pai uma variação da mesma cor
 
+py.iplot(fig)
+
 # Abre a página em html para plotagem do gráfico
 import dash 
 import dash_core_components as dcc
