@@ -31,7 +31,7 @@ siglas = []
 #lista vazia que armazena os dados de população
 populations = []
 #os anos podem ser alterados nessa linha
-year = '2016'
+year = '2012'
 #lê as linhas começando da linha 10 e excluindo as duas últimas linhas
 for l in lines[10:-2]:
     #.split(",") separa elementos por vírgula da lista
@@ -57,7 +57,7 @@ fig = px.choropleth(d, geojson=br, locations='regiao', color='populacao',
                            
                           )
 fig.update_layout(
-    title_text = 'Distribuição Regional do Programa Luz Para Todos no Ano de 2016', #título do gráfico
+    title_text = 'Distribuição Regional do Programa Luz Para Todos no Ano de 2012', #título do gráfico
 )
 
 fig.show()#plota gráfico
@@ -91,7 +91,7 @@ siglas = []
 #lista vazia que armazena os dados de população
 populations = []
 #os anos podem ser alterados nessa linha
-year = '2016'
+year = '2013'
 #lê as linhas começando da linha 10 e excluindo as duas últimas linhas
 for l in lines[10:-2]:
     #.split(",") separa elementos por vírgula da lista
@@ -117,7 +117,7 @@ fig = px.choropleth(d, geojson=br, locations='regiao', color='populacao',
                            
                           )
 fig.update_layout(
-    title_text = 'Distribuição Regional do Programa Luz Para Todos no Ano de 2016', #título do gráfico
+    title_text = 'Distribuição Regional do Programa Luz Para Todos no Ano de 2013', #título do gráfico
 )
 
 fig.show()#plota gráfico
@@ -408,5 +408,8 @@ fig = px.choropleth(d, geojson=br, locations='regiao', color='populacao',
                            scope="south america",
                            # labels={'unemp':'unemployment rate'}
                           )
+fig.update_layout(
+    title_text = 'Distribuição Regional do Programa Luz Para Todos no Ano de 2018', #título do gráfico
+)
 
 fig.show()
