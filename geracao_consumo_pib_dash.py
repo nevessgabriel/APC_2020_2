@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-#importando bibliotecas------------------------------------------
+#---------------------------------------------------------importando bibliotecas------------------------------------------
 
 import xlrd
 import dash_core_components as dcc
@@ -28,7 +22,7 @@ py.init_notebook_mode(connected=True)
 
 #---------------------------------------------Buscando arquivo.xls e a tabela-----------------------------------------------
 wb= xlrd.open_workbook('base_consumo.xls')             #xlrd Abre o arquivo xls
-wc= xlrd.open_workbook('base_pibcorrente.xlsx')        #xlrd Abre o arquivo xls
+wc= xlrd.open_workbook('base_pibcorrente.xls')        #xlrd Abre o arquivo xls
 p= wb.sheet_by_name('Tabela 3.1')                      #sheet Escolhe a tabela a partir do nome
 p1=wc.sheet_by_name('Tabela')                          #sheet Escolhe a tabela a partir do nome
 
