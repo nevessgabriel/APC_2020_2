@@ -2,8 +2,6 @@
 import pandas as pd
 import plotly.offline as py
 import plotly.graph_objs as go 
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 py.init_notebook_mode(connected=True)
 
 # Leitura do arquivo.csv
