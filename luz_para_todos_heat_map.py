@@ -381,20 +381,27 @@ br = json.loads(f.read())
 # abre o arquivo de dados
 f = open("Anuário Estatístico de Energia Elétrica 2020 - Workbook.xlsx - Tabela 2.24.csv")
 
+# .split("\n") divide essa string do conteudo em linhas
 lines = f.read().split("\n") 
+#lista vazia que armazena as siglas
 siglas = []
+#lista vazia que armazena os dados de população
 populations = []
-
+#os anos podem ser alterados nessa linha
 year = '2018'
-
+#lê as linhas começando da linha 10 e excluindo as duas últimas linhas
 for l in lines[10:-2]:
+    #.split(",") separa elementos por vírgula da lista
     ls = l.split(",")
     siglas.append(name_to_sigla(ls[1]))
-    
+    #.strip retira todos os espaços do começo e do inicio da string então '   -    ' fica '-'
     population_str = ls[int(year[-1])].strip()
+    #compara a string recebida com o '-'
     if population_str == '-':
+        #se True '-' é igual a 0
         population = 0
     else:
+        #se False transforma a string recebida num float
         population = float(population_str)
 
     populations.append(population)
