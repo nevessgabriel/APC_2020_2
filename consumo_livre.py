@@ -55,9 +55,9 @@ print (parents)
 print (values)'''
 
 # Atribuição dos elementos que vão aparecer no gráfico
-fig =go.Figure(go.Sunburst(labels=labels,parents=parents,values=values))
-fig.update_traces(hoverinfo="label+value+percent parent") # Informações do hover
-fig.update_layout(title=dict(    #"dict()"Função que atribui uma série de caracteristicas a variável(dicionário)
+consumo_livre =go.Figure(go.Sunburst(labels=labels,parents=parents,values=values))
+consumo_livre.update_traces(hoverinfo="label+value+percent parent") # Informações do hover
+consumo_livre.update_layout(title=dict(    #"dict()"Função que atribui uma série de caracteristicas a variável(dicionário)
     text='Consumo Livre Por Região GWh 2012-2018',
     font=dict(size=20),
     xref='paper', # Área central do gráfico
@@ -69,12 +69,12 @@ height=700, # Condicionamento do tamanho do texto
 sunburstcolorway =colors,
 extendsunburstcolors = True) # Concede aos filhos do elemento pai uma variação da mesma cor
 
-py.iplot(fig)
+py.iplot(consumo_livre)
 
 # Abre a página em html para plotagem do gráfico
 import dash 
 import dash_core_components as dcc
 import dash_html_components as html
 app = dash.Dash()
-app.layout = html.Div([dcc.Graph(figure = fig)])
+app.layout = html.Div([dcc.Graph(figure = consumo_livre)])
 app.run_server(debug = True) # (debug= True) Faz a verificação de erros
