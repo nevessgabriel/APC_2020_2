@@ -42,8 +42,6 @@ del dados_2017[0:6]
 del dados_2018[0:6]
 
 # Criação do gráfico Sunburst
-import plotly.graph_objects as go
-
 # Criação da lista para atribuição dos nomes que aparecem no gráfico 
 labels=['REGIÕES']+ regioes+['2012']*5+['2013']*5+['2014']*5+['2015']*5+['2016']*5+['2017']*5+['2018']*5
 # Atribuição de quais elementos da lista label são filhos de quem
