@@ -71,8 +71,8 @@ py.iplot(consumo_livre)
 
 # Abre a página em html para plotagem do gráfico
 import dash 
-import dash_core_components as dcc
-import dash_html_components as html
-app = dash.Dash()
-app.layout = html.Div([dcc.Graph(figure = consumo_livre)])
+import dash_core_components as dcc # Biblioteca que identifica o gráfico e pemite recurso de filtro
+import dash_html_components as html # Permite utilização das tags html 
+app = dash.Dash() # Variável para armazena uma página
+app.layout = html.Div([dcc.Graph(figure = consumo_livre)]) # Recebe as configurações da página do dash
 app.run_server(debug = True) # (debug= True) Faz a verificação de erros
